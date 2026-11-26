@@ -7,16 +7,16 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #0a0a0c;
-      --bg-card: rgba(22, 22, 28, 0.9);
+      --bg-dark: #0d0d11;
+      --bg-card: rgba(24, 24, 30, 0.85);
       --gold-primary: #f5c518;
-      --gold-gradient: linear-gradient(135deg, #ffd700 0%, #f5c518 50%, #d49a00 100%);
-      --text-main: #f0f0f5;
-      --text-muted: #a8a8b8;
-      --glass-border: rgba(245, 197, 24, 0.25);
+      --gold-light: #ffe066;
+      --text-main: #f4f4f8;
+      --text-muted: #a4a4b5;
+      --border-subtle: rgba(245, 197, 24, 0.2);
     }
 
     * {
@@ -35,7 +35,7 @@
       user-select: none;
     }
 
-    /* Background with lighting effect */
+    /* Subtle stage atmosphere */
     .slider-container {
       position: relative;
       height: 100vh;
@@ -43,10 +43,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at 50% 15%, #1f1833 0%, #0a0a0c 75%);
+      background: radial-gradient(circle at 50% 10%, #201830 0%, #0d0d11 80%);
     }
 
-    /* Slide Item */
+    /* Slide container */
     .slide {
       position: absolute;
       top: 0;
@@ -59,9 +59,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2.5rem 4rem;
+      padding: 3rem 5rem;
       transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-      transform: scale(0.97) translateY(15px);
+      transform: scale(0.98) translateY(12px);
       text-align: center;
     }
 
@@ -71,85 +71,60 @@
       transform: scale(1) translateY(0);
     }
 
-    /* Typography */
-    h1, h2, .band-font {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: 4rem;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.3rem;
-      text-shadow: 0 0 35px rgba(245, 197, 24, 0.25);
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      color: #fff;
-      margin-bottom: 0.8rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50px;
-      height: 3px;
-      background: var(--gold-primary);
-      border-radius: 2px;
-    }
-
-    p.subtitle {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      font-weight: 300;
-    }
-
-    /* Badges */
+    /* Crachás elegantes (Badges) */
     .badge {
       display: inline-block;
-      padding: 0.35rem 0.9rem;
+      padding: 0.35rem 1rem;
       background: rgba(245, 197, 24, 0.12);
-      border: 1px solid var(--gold-primary);
+      border: 1px solid var(--border-subtle);
       border-radius: 30px;
       color: var(--gold-primary);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
 
-    /* Hero Crown Badge */
-    .crown-icon {
-      font-size: 4.5rem;
-      color: var(--gold-primary);
-      filter: drop-shadow(0 0 25px rgba(245, 197, 24, 0.5));
+    /* Headings with Bebas Neue (Authentic Rock Aesthetic) */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 6rem;
+      letter-spacing: 4px;
+      line-height: 0.95;
+      color: #fff;
+      text-transform: uppercase;
       margin-bottom: 0.5rem;
-      animation: floatCrown 3s ease-in-out infinite alternate;
     }
 
-    @keyframes floatCrown {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-8px); }
+    h1 span {
+      color: var(--gold-primary);
     }
 
-    /* Split layout: Content + Visual/Media */
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.2rem;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* Split layout: Content + Media */
     .two-col-layout {
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 2.5rem;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 3rem;
       align-items: center;
-      max-width: 1100px;
+      max-width: 1150px;
       width: 100%;
       text-align: left;
     }
@@ -157,10 +132,10 @@
     /* Video Player Box */
     .video-card {
       background: var(--bg-card);
-      border: 1px solid var(--glass-border);
-      border-radius: 14px;
-      padding: 0.8rem;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.7), 0 0 20px rgba(245, 197, 24, 0.15);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.75rem;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
@@ -188,18 +163,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
-      padding: 0 0.4rem;
+      padding: 0.2rem 0.5rem;
     }
 
     .video-link {
       color: var(--gold-primary);
       text-decoration: none;
       font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 4px;
       transition: color 0.2s ease;
     }
 
@@ -208,85 +180,24 @@
       color: #fff;
     }
 
-    /* Album Gallery Grid */
-    .album-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      max-width: 1100px;
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    .album-card {
-      background: var(--bg-card);
-      border: 1px solid var(--glass-border);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .album-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--gold-primary);
-    }
-
-    .album-cover {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-bottom: 1px solid var(--glass-border);
-      background: #111;
-    }
-
-    .album-info {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
-
-    .album-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #fff;
-    }
-
-    .album-year {
-      font-size: 0.8rem;
-      color: var(--gold-primary);
-      font-weight: 600;
-    }
-
-    .album-hits {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.3;
-    }
-
     /* Cards Grid */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-      max-width: 1100px;
+      gap: 1.4rem;
+      max-width: 1150px;
       width: 100%;
       margin-top: 0.5rem;
     }
 
     .card {
       background: var(--bg-card);
-      border: 1px solid var(--glass-border);
+      border: 1px solid var(--border-subtle);
       border-radius: 12px;
-      padding: 1.3rem;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      padding: 1.5rem 1.2rem;
       text-align: left;
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .card:hover {
@@ -295,19 +206,91 @@
     }
 
     .card-title {
-      font-weight: 700;
-      font-size: 1.1rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
       color: var(--gold-primary);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-role {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .card-desc {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.5;
     }
 
-    /* Bullet list */
+    /* Album Gallery Grid */
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1150px;
+      width: 100%;
+      margin-top: 0.8rem;
+    }
+
+    .album-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .album-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-primary);
+    }
+
+    .album-cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #111;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .album-info {
+      padding: 1rem 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .album-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .album-year {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.15rem;
+      color: var(--gold-primary);
+      letter-spacing: 1px;
+    }
+
+    .album-hits {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-top: 0.2rem;
+    }
+
+    /* Bullet Points */
     .bullet-list {
       list-style: none;
       width: 100%;
@@ -317,86 +300,58 @@
     .bullet-list li {
       position: relative;
       padding-left: 1.8rem;
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+      font-size: 1.1rem;
       line-height: 1.5;
-      color: #e0e0ea;
+      color: #e2e2ec;
     }
 
     .bullet-list li::before {
-      content: '✦';
+      content: '—';
       position: absolute;
       left: 0;
       color: var(--gold-primary);
-      font-size: 1rem;
+      font-weight: 700;
     }
 
     .bullet-list strong {
       color: #fff;
     }
 
-    /* Quotes */
+    /* Quote Box */
     .quote-box {
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255, 255, 255, 0.03);
       border-left: 3px solid var(--gold-primary);
-      padding: 0.9rem 1.4rem;
-      margin-top: 1rem;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem;
       font-style: italic;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #ddd;
       border-radius: 0 8px 8px 0;
     }
 
-    /* Big Stats */
-    .stats-row {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .stat-item {
-      text-align: left;
-    }
-
-    .stat-number {
-      font-size: 2.8rem;
-      font-weight: 800;
-      font-family: 'Cinzel', serif;
-      color: var(--gold-primary);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 0.2rem;
-    }
-
-    /* Controls */
+    /* Navigation Controls */
     .nav-buttons {
       position: fixed;
       bottom: 2rem;
       right: 3rem;
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       z-index: 100;
     }
 
     .nav-btn {
-      background: rgba(22, 22, 28, 0.85);
-      border: 1px solid var(--glass-border);
+      background: rgba(24, 24, 30, 0.9);
+      border: 1px solid var(--border-subtle);
       color: var(--text-main);
-      width: 48px;
-      height: 48px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
       cursor: pointer;
-      backdrop-filter: blur(8px);
       transition: all 0.2s ease;
     }
 
@@ -404,7 +359,7 @@
       background: var(--gold-primary);
       color: #000;
       border-color: var(--gold-primary);
-      transform: scale(1.1);
+      transform: scale(1.08);
     }
 
     .progress-bar-container {
@@ -413,23 +368,23 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
       z-index: 1000;
     }
 
     .progress-bar {
       height: 100%;
-      background: var(--gold-gradient);
+      background: var(--gold-primary);
       width: 16.66%;
       transition: width 0.3s ease;
     }
 
     .slide-counter {
       position: fixed;
-      bottom: 2.5rem;
+      bottom: 2.2rem;
       left: 3rem;
-      font-size: 0.9rem;
-      font-weight: 600;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
       color: var(--text-muted);
       letter-spacing: 2px;
       z-index: 100;
@@ -441,7 +396,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 0.75rem;
-      color: #777;
+      color: #666;
       letter-spacing: 1px;
       z-index: 90;
     }
@@ -451,6 +406,7 @@
       .album-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
       .slide { padding: 1.5rem; overflow-y: auto; }
       body { overflow-y: auto; }
+      h1 { font-size: 4rem; }
     }
   </style>
 </head>
@@ -465,15 +421,15 @@
 
     <!-- SLIDE 1: Title & Hero -->
     <div class="slide active" id="slide-1">
-      <div class="crown-icon">👑</div>
       <span class="badge">English Oral Presentation</span>
-      <h1>QUEEN</h1>
+      <h1>QUEEN<span>.</span></h1>
       <p class="subtitle">The Timeless Legends of Rock</p>
       
       <div class="quote-box" style="max-width: 650px;">
         "I won't be a rock star. I will be a legend." — Freddie Mercury
       </div>
-      <p style="color: var(--text-muted); margin-top: 1.5rem; font-size: 0.95rem;">
+
+      <p style="color: var(--text-muted); margin-top: 2rem; font-size: 1rem;">
         Presented by: <strong>Lu</strong>
       </p>
     </div>
@@ -481,29 +437,33 @@
     <!-- SLIDE 2: The 4 Members -->
     <div class="slide" id="slide-2">
       <span class="badge">London, 1970</span>
-      <h2>The Four Band Members</h2>
-      <p class="subtitle">Four distinct songwriters, one unmatched chemistry</p>
+      <h2>The Band Members</h2>
+      <p class="subtitle">Four distinct songwriters, one unique chemistry</p>
       
       <div class="card-grid">
         <div class="card">
           <div class="card-title">Freddie Mercury</div>
-          <div class="card-desc">Lead vocals & piano. Legendary 4-octave voice range and unforgettable stage showmanship.</div>
+          <div class="card-role">Lead Vocals & Piano</div>
+          <div class="card-desc">Known for his 4-octave voice range, charismatic theatrical presence, and magnetic energy.</div>
         </div>
         <div class="card">
           <div class="card-title">Brian May</div>
-          <div class="card-desc">Guitarist & PhD astrophysicist. Handcrafted his world-famous guitar "Red Special" with his father.</div>
+          <div class="card-role">Guitar & Vocals</div>
+          <div class="card-desc">Astrophysicist and musician. He built his famous "Red Special" guitar by hand with his father.</div>
         </div>
         <div class="card">
           <div class="card-title">Roger Taylor</div>
-          <div class="card-desc">Drums & backing vocals. High-energy rhythm with high-pitched harmonies that defined Queen's sound.</div>
+          <div class="card-role">Drums & Vocals</div>
+          <div class="card-desc">High-power drummer with unique high-pitched vocal harmonies that defined Queen's choruses.</div>
         </div>
         <div class="card">
           <div class="card-title">John Deacon</div>
-          <div class="card-desc">Bass guitar. The reserved musical genius who composed mega-hits like <em>Another One Bites the Dust</em>.</div>
+          <div class="card-role">Bass Guitar</div>
+          <div class="card-desc">The quiet genius who composed mega dance and funk hits like <em>Another One Bites the Dust</em>.</div>
         </div>
       </div>
-      <p style="margin-top: 1.5rem; color: var(--gold-primary); font-size: 0.95rem; font-weight: 600;">
-        ★ Unbelievable Fact: All four members wrote at least one #1 worldwide hit song!
+      <p style="margin-top: 1.5rem; color: var(--gold-primary); font-size: 0.95rem; font-weight: 500;">
+        ★ Fun Fact: Every single member wrote at least one #1 worldwide hit song!
       </p>
     </div>
 
@@ -511,35 +471,35 @@
     <div class="slide" id="slide-3">
       <span class="badge">1975 Masterpiece</span>
       <h2>Bohemian Rhapsody</h2>
-      <p class="subtitle">The impossible song that broke all radio rules</p>
+      <p class="subtitle">The legendary track that broke all radio conventions</p>
 
       <div class="two-col-layout">
         <div>
           <ul class="bullet-list">
-            <li><strong>Nearly 6 Minutes Long:</strong> Record labels strongly said: <em>"Radios will never play this!"</em></li>
-            <li><strong>Rock Meets Opera:</strong> Fused heavy metal guitar riffs with delicate Italian classical opera.</li>
-            <li><strong>No Chorus:</strong> Flows naturally through ballad, opera, and hard rock sections.</li>
-            <li><strong>Global Phenomenon:</strong> Over <strong>2 billion streams</strong> on Spotify alone today.</li>
+            <li><strong>Nearly 6 Minutes Long:</strong> Record labels said: <em>"Radios will never play this!"</em></li>
+            <li><strong>Rock Meets Opera:</strong> Blended guitar riffs, emotional piano, and Italian operatic vocals.</li>
+            <li><strong>No Chorus:</strong> Flows freely through ballad, opera, and hard rock sections.</li>
+            <li><strong>Immortal Success:</strong> Over <strong>2 billion streams</strong> on Spotify alone.</li>
           </ul>
           <div class="quote-box">
             "Is this the real life? Is this just fantasy?"
           </div>
         </div>
 
-        <!-- Embedded YouTube Clip -->
+        <!-- Video Card -->
         <div class="video-card">
           <div class="video-container">
             <iframe 
-              src="https://www.youtube-nocookie.com/embed/fJ9rUzIMcZQ?start=184" 
-              title="Queen - Bohemian Rhapsody (Official Video)" 
+              src="https://www.youtube-nocookie.com/embed/mP0VHJYFOAU" 
+              title="Bohemian Rhapsody Trailer" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowfullscreen>
             </iframe>
           </div>
           <div class="video-footer">
-            <span>Official Video (Operatic Section)</span>
+            <span>Bohemian Rhapsody Clip</span>
             <a class="video-link" href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" target="_blank" rel="noopener noreferrer">
-              Open on YouTube ↗
+              Play Full Music Video ↗
             </a>
           </div>
         </div>
@@ -549,45 +509,33 @@
     <!-- SLIDE 4: Live Aid 1985 (With Video Embed) -->
     <div class="slide" id="slide-4">
       <span class="badge">July 13, 1985</span>
-      <h2>Live Aid: 20 Minutes of Magic</h2>
-      <p class="subtitle">The greatest live rock performance in music history</p>
+      <h2>Live Aid 1985</h2>
+      <p class="subtitle">20 minutes at Wembley Stadium that defined rock history</p>
 
       <div class="two-col-layout">
         <div>
-          <div class="stats-row">
-            <div class="stat-item">
-              <div class="stat-number">20</div>
-              <div class="stat-label">Minutes on Stage</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">72k</div>
-              <div class="stat-label">At Wembley</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">1.9B</div>
-              <div class="stat-label">Global TV Viewers</div>
-            </div>
-          </div>
           <ul class="bullet-list">
-            <li>Freddie commanded 72,000 spectators with the legendary <strong>"Ay-Oh!"</strong> vocal call.</li>
-            <li>Voted by world music critics as the <strong>greatest live rock performance of all time</strong>.</li>
+            <li><strong>72,000 People Live:</strong> Wembley Stadium was completely packed on July 13, 1985.</li>
+            <li><strong>1.9 Billion Viewers:</strong> Broadcast live across the globe for charity.</li>
+            <li><strong>Complete Crowd Control:</strong> Freddie commanded the audience with his famous <strong>"Ay-Oh!"</strong> call.</li>
+            <li><strong>History Made:</strong> Widely voted by critics as the <strong>greatest live rock performance</strong> of all time.</li>
           </ul>
         </div>
 
-        <!-- Embedded YouTube Clip -->
+        <!-- Video Card -->
         <div class="video-card">
           <div class="video-container">
             <iframe 
-              src="https://www.youtube-nocookie.com/embed/o-0ygW-B_gI?start=1" 
+              src="https://www.youtube-nocookie.com/embed/o-0ygW-B_gI" 
               title="Queen - Radio Ga Ga (Live Aid 1985)" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowfullscreen>
             </iframe>
           </div>
           <div class="video-footer">
-            <span>Live Aid 1985 (Radio Ga Ga / Wembley)</span>
-            <a class="video-link" href="https://www.youtube.com/watch?v=o-0ygW-B_gI" target="_blank" rel="noopener noreferrer">
-              Open on YouTube ↗
+            <span>Live Aid (Radio Ga Ga / Wembley)</span>
+            <a class="video-link" href="https://www.youtube.com/watch?v=vbvyNnw8Qjg" target="_blank" rel="noopener noreferrer">
+              Watch Bohemian Rhapsody Live ↗
             </a>
           </div>
         </div>
@@ -597,8 +545,8 @@
     <!-- SLIDE 5: Iconic Albums Gallery -->
     <div class="slide" id="slide-5">
       <span class="badge">Discography & Diversity</span>
-      <h2>Iconic Albums & Anthems</h2>
-      <p class="subtitle">Mastering rock, funk, opera, and stadium anthems across decades</p>
+      <h2>Iconic Albums & Diversity</h2>
+      <p class="subtitle">A band that refused to be trapped in just one musical genre</p>
 
       <div class="album-grid">
         <!-- A Night at the Opera -->
@@ -647,18 +595,18 @@
     <div class="slide" id="slide-6">
       <span class="badge">The Legacy</span>
       <h2>The Show Must Go On</h2>
-      <p class="subtitle">Queen's message, passion, and spirit live forever</p>
+      <p class="subtitle">Queen's energy and passion continue to inspire generations</p>
 
-      <div class="quote-box" style="text-align: center; border-left: none; border: 1px solid var(--gold-primary); max-width: 700px;">
+      <div class="quote-box" style="text-align: center; border-left: none; border: 1px solid var(--border-subtle); max-width: 700px;">
         "You can be anything you want to be, just turn yourself into anything you think that you could ever be."
       </div>
 
       <div style="margin-top: 2rem; text-align: center;">
-        <h3 style="font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold-primary); margin-bottom: 0.8rem;">
+        <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 2px; color: var(--gold-primary); margin-bottom: 0.5rem;">
           Thank You For Listening!
         </h3>
         <p style="color: var(--text-muted); font-size: 1.15rem;">
-          Do you have any questions or a favorite Queen song?
+          Any questions or a favorite Queen song?
         </p>
       </div>
     </div>
@@ -675,7 +623,7 @@
   </div>
 
   <!-- Keyboard Controls hint -->
-  <div class="keyboard-hint">Use [ ← / → ] keys or click buttons to navigate • Press [F] for Fullscreen</div>
+  <div class="keyboard-hint">Use [ ← / → ] keys to navigate • Press [F] for Fullscreen</div>
 
   <script>
     const slides = document.querySelectorAll('.slide');
@@ -693,10 +641,7 @@
         if (i === index) slide.classList.add('active');
       });
 
-      // Update counter
       slideCounter.textContent = `0${index + 1} / 0${totalSlides}`;
-
-      // Update progress bar
       const progressPercent = ((index + 1) / totalSlides) * 100;
       progressBar.style.width = `${progressPercent}%`;
     }
@@ -715,11 +660,9 @@
       }
     }
 
-    // Button clicks
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
 
@@ -738,7 +681,6 @@
       }
     });
 
-    // Touch swipe for mobile/tablets
     let touchStartX = 0;
     let touchEndX = 0;
 
