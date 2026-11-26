@@ -432,11 +432,90 @@
     }
 
     @media (max-width: 900px) {
-      .two-col-layout { grid-template-columns: 1fr; gap: 1.5rem; }
-      .album-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      .slide { padding: 1.5rem; overflow-y: auto; }
-      body { overflow-y: auto; }
-      h1 { font-size: 4rem; }
+      body {
+        overflow: hidden;
+      }
+      .slider-container {
+        height: 100vh;
+        height: 100dvh;
+      }
+      .slide { 
+        padding: 4rem 1.5rem 5.5rem 1.5rem; 
+        overflow-y: auto; 
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+      }
+      .two-col-layout { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem; 
+      }
+      .album-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 0.8rem; 
+      }
+      .side-image-card {
+        min-height: 220px;
+        max-height: 280px;
+      }
+      h1 { 
+        font-size: 3.5rem; 
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+      p.subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+      .bullet-list li {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+      }
+      .quote-box {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
+      }
+      .nav-buttons {
+        bottom: 1.2rem;
+        right: 1.5rem;
+        gap: 0.6rem;
+      }
+      .nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+      }
+      .slide-counter {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        font-size: 1.1rem;
+      }
+      .keyboard-hint {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .album-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+      }
+      .album-info {
+        padding: 0.6rem 0.4rem;
+      }
+      .album-title {
+        font-size: 0.85rem;
+      }
+      .album-hits {
+        display: none;
+      }
+      h1 {
+        font-size: 2.8rem;
+      }
     }
   </style>
 </head>
