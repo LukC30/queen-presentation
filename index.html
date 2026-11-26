@@ -71,7 +71,7 @@
       transform: scale(1) translateY(0);
     }
 
-    /* Crachás elegantes (Badges) */
+    /* Badges */
     .badge {
       display: inline-block;
       padding: 0.35rem 1rem;
@@ -86,7 +86,7 @@
       letter-spacing: 1.5px;
     }
 
-    /* Headings with Bebas Neue (Authentic Rock Aesthetic) */
+    /* Headings with Bebas Neue */
     h1 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 6rem;
@@ -330,6 +330,36 @@
       border-radius: 0 8px 8px 0;
     }
 
+    /* Side Image Card */
+    .side-image-card {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .side-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .side-image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+      padding: 1rem 1.2rem;
+      font-size: 0.9rem;
+      color: #e0e0ea;
+    }
+
     /* Navigation Controls */
     .nav-buttons {
       position: fixed;
@@ -375,7 +405,7 @@
     .progress-bar {
       height: 100%;
       background: var(--gold-primary);
-      width: 16.66%;
+      width: 12.5%;
       transition: width 0.3s ease;
     }
 
@@ -428,10 +458,6 @@
       <div class="quote-box" style="max-width: 650px;">
         "I won't be a rock star. I will be a legend." — Freddie Mercury
       </div>
-
-      <p style="color: var(--text-muted); margin-top: 2rem; font-size: 1rem;">
-        Presented by: <strong>Lu</strong>
-      </p>
     </div>
 
     <!-- SLIDE 2: The 4 Members -->
@@ -467,7 +493,7 @@
       </p>
     </div>
 
-    <!-- SLIDE 3: Bohemian Rhapsody (With Video Embed) -->
+    <!-- SLIDE 3: Bohemian Rhapsody (With Live Aid 1985 Video - 100% Unlocked) -->
     <div class="slide" id="slide-3">
       <span class="badge">1975 Masterpiece</span>
       <h2>Bohemian Rhapsody</h2>
@@ -486,27 +512,27 @@
           </div>
         </div>
 
-        <!-- Video Card -->
+        <!-- Video Card: Live Aid Version (Official Live Aid Channel - Permitted worldwide) -->
         <div class="video-card">
           <div class="video-container">
             <iframe 
-              src="https://www.youtube-nocookie.com/embed/mP0VHJYFOAU" 
-              title="Bohemian Rhapsody Trailer" 
+              src="https://www.youtube-nocookie.com/embed/vbvyNnw8Qjg" 
+              title="Queen - Bohemian Rhapsody (Live Aid 1985)" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowfullscreen>
             </iframe>
           </div>
           <div class="video-footer">
-            <span>Bohemian Rhapsody Clip</span>
-            <a class="video-link" href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" target="_blank" rel="noopener noreferrer">
-              Play Full Music Video ↗
+            <span>Bohemian Rhapsody (Live Aid 1985)</span>
+            <a class="video-link" href="https://www.youtube.com/watch?v=vbvyNnw8Qjg" target="_blank" rel="noopener noreferrer">
+              Watch on YouTube ↗
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 4: Live Aid 1985 (With Video Embed) -->
+    <!-- SLIDE 4: Live Aid 1985 (With Radio Ga Ga Embed) -->
     <div class="slide" id="slide-4">
       <span class="badge">July 13, 1985</span>
       <h2>Live Aid 1985</h2>
@@ -534,8 +560,8 @@
           </div>
           <div class="video-footer">
             <span>Live Aid (Radio Ga Ga / Wembley)</span>
-            <a class="video-link" href="https://www.youtube.com/watch?v=vbvyNnw8Qjg" target="_blank" rel="noopener noreferrer">
-              Watch Bohemian Rhapsody Live ↗
+            <a class="video-link" href="https://www.youtube.com/watch?v=o-0ygW-B_gI" target="_blank" rel="noopener noreferrer">
+              Watch on YouTube ↗
             </a>
           </div>
         </div>
@@ -591,9 +617,60 @@
       </div>
     </div>
 
-    <!-- SLIDE 6: Legacy & Conclusion -->
+    <!-- SLIDE 6: Queen in Brazil (Rock in Rio 1985) -->
     <div class="slide" id="slide-6">
-      <span class="badge">The Legacy</span>
+      <span class="badge">Special Connection</span>
+      <h2>Queen in Brazil (1985)</h2>
+      <p class="subtitle">The historic night at the first Rock in Rio</p>
+
+      <div class="two-col-layout">
+        <div>
+          <ul class="bullet-list">
+            <li><strong>250,000 People:</strong> The largest concert audience in Queen's entire career, right here in Rio de Janeiro.</li>
+            <li><strong>Love of My Life:</strong> The Brazilian crowd sang every single word in perfect harmony, moving Freddie to tears.</li>
+            <li><strong>A Forever Bond:</strong> Freddie Mercury called it one of the most emotional moments of his entire life.</li>
+          </ul>
+          <div class="quote-box">
+            "Love of my life, you've hurt me... you've broken my heart and now you leave me."
+          </div>
+        </div>
+
+        <div class="side-image-card">
+          <img src="images/rock_in_rio_freddie.jpg" alt="Freddie Mercury Rock in Rio 1985">
+          <div class="side-image-caption">
+            <strong>Rock in Rio 1985:</strong> Freddie conducting 250,000 Brazilians singing <em>Love of My Life</em>.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: Queen in Pop Culture -->
+    <div class="slide" id="slide-7">
+      <span class="badge">Modern Legacy</span>
+      <h2>Queen in Pop Culture</h2>
+      <p class="subtitle">Movies, video games, and anime: Queen is everywhere today</p>
+
+      <div class="two-col-layout">
+        <div>
+          <ul class="bullet-list">
+            <li><strong>Cinema & Oscars:</strong> The 2018 movie <em>Bohemian Rhapsody</em> won 4 Oscars and earned $900M, introducing Queen to Gen Z.</li>
+            <li><strong>Gaming Hits:</strong> Their anthems star in <em>Guitar Hero</em>, <em>GTA V</em>, <em>Fortnite Festival</em>, and <em>Just Dance</em>.</li>
+            <li><strong>Anime (JoJo's Bizarre Adventure):</strong> The Stand <strong>Killer Queen</strong> and its powers <em>Sheer Heart Attack</em> and <em>Bites the Dust</em> are named directly after Queen!</li>
+          </ul>
+        </div>
+
+        <div class="side-image-card">
+          <img src="images/jojo_killer_queen.jpg" alt="Killer Queen Stand in JoJo">
+          <div class="side-image-caption">
+            <strong>JoJo's Bizarre Adventure:</strong> The iconic Stand <em>Killer Queen</em> activating <em>Bites the Dust</em>.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: Legacy & Conclusion -->
+    <div class="slide" id="slide-8">
+      <span class="badge">Conclusion</span>
       <h2>The Show Must Go On</h2>
       <p class="subtitle">Queen's energy and passion continue to inspire generations</p>
 
@@ -614,7 +691,7 @@
   </div>
 
   <!-- Slide Counter -->
-  <div class="slide-counter" id="slideCounter">01 / 06</div>
+  <div class="slide-counter" id="slideCounter">01 / 08</div>
 
   <!-- Navigation Buttons -->
   <div class="nav-buttons">
